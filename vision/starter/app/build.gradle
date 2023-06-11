@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    namespace "com.google.codelab.mlkit"
+    compileSdkVersion 31
     defaultConfig {
         applicationId "com.google.codelab.mlkit"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,8 +33,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     // Face features
-    implementation 'com.google.mlkit:face-detection:16.0.0'
+//    implementation 'com.google.mlkit:face-detection:16.0.0'
+    implementation 'com.google.mlkit:face-detection:16.1.5'
 
     // Text features
-    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.0.0'
+//    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.0.0'
+//    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.0'
+    // https://mvnrepository.com/artifact/com.google.mlkit/text-recognition
+    implementation 'com.google.mlkit:text-recognition:16.0.0'
+
 }
